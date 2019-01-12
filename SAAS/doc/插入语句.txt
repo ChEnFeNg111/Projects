@@ -1,0 +1,46 @@
+1)企业用户表 (saas_qiye):
+测试语句:
+
+insert into saas_qiye(qiyeid,industryid,areaid,company_name,name,telephone,licence_image,flag,register_time,end_time,username,password) values(1,1,1,'a','a','1','a','0','2018-12-01','2019-12-01','a','a');
+insert into saas_qiye(qiyeid,industryid,areaid,company_name,name,telephone,licence_image,flag,register_time,end_time,username,password) values(2,2,2,'b','b','2','b','1','2018-12-01','2019-12-01','b','b');
+insert into saas_qiye(qiyeid,industryid,areaid,company_name,name,telephone,licence_image,flag,register_time,end_time,username,password) values(3,3,3,'c','c','3','c','1','2018-12-01','2019-12-01','c','c');
+insert into saas_qiye(qiyeid,industryid,areaid,company_name,name,telephone,licence_image,flag,register_time,end_time,username,password) values(4,4,4,'d','d','4','d','0','2018-12-01','2019-12-01','d','d');
+insert into saas_qiye(qiyeid,industryid,areaid,company_name,name,telephone,licence_image,flag,register_time,end_time,username,password) values(5,5,5,'e','e','5','e','0','2018-12-01','2019-12-01','e','e');
+
+2)营销方案表(saas_marking_program):
+测试语句:
+ insert into saas_marketingplan (programid,name,author,program_image,price,program_file,describtion, publish_time, status, count, pay,checkstatus) values(2,'nuiboib','uihuih','0909090909h9hihi.png',1000.9,'a.txt','uihohiuhiujoijiojojoinonbononononononononobbbboooo',' 2017-11-01 14:46:50','rrrrrr',8000,'yes','oncheck');
+ 
+  insert into saas_marketingplan (programid,name,author,program_image,price,program_file,describtion, publish_time, status, count, pay,checkstatus) values (3,'nuiboib','rose','8989897373838.png',1000.9,'dnun.txt','bhihbhibibibibi',' 2015-11-01 14:55:50','rrrrrr',8000,'yes','oncheck');
+  
+  insert into saas_marketingplan (programid,name,author,program_image,price,program_file,describtion, publish_time, status, count, pay,checkstatus) values (4,'nuiboib','rose','8989897373838.png',1000.9,'dnun.txt','cbc',' 2013-01-31 14:55:50','rrrrrr',8000,'no','oncheck');
+  
+  insert into saas_marketingplan (programid,name,author,program_image,price,program_file,describtion, publish_time, status, count, pay,checkstatus) values (5,'nuiboib','rose','8989897373838.png',112.9,'dnun.txt','bhihbhibibibibi',' 2012-09-21 09:55:50','rrrrrr',99999,'no','oncheck');
+
+
+3)方案分类表(saas_program_class):
+测试语句:
+
+insert into saas_program_class(programid,rfmclass) values (1,'潜力客户');
+insert into saas_program_class(programid,rfmclass) values (2,'重要挽留');
+insert into saas_program_class(programid,rfmclass) values (3,'流失');
+insert into saas_program_class(programid,rfmclass) values (6,'重要价值用户');
+insert into saas_program_class(programid,rfmclass) values (4,'一般维持用户');
+
+
+4)方案行业表(saas_program_industry):
+测试语句:
+
+insert into saas_program_industry(programid,industryid) values('a',1);
+insert into saas_program_industry(programid,industryid) values('b',2);
+insert into saas_program_industry(programid,industryid) values('c',3);
+insert into saas_program_industry(programid,industryid) values('d',4);
+insert into saas_program_industry(programid,industryid) values('e',5);
+
+5)购买记录表(saas_customerprogram):
+测试语句:
+insert into saas_customerprogram(orderid,qiyeid,programid,buyingtime,buyingmoney) values(2,2,2,”2018-12-1 12:00:00”,888.88);
+insert into saas_customerprogram(orderid,qiyeid,programid,buyingtime,buyingmoney) values(2,2,2,”2018-11-1 13:00:00”,666.66);
+insert into saas_customerprogram(orderid,qiyeid,programid,buyingtime,buyingmoney) values(2,2,2,”2018-10-1 14:00:00”,999.99);
+insert into saas_customerprogram(orderid,qiyeid,programid,buyingtime,buyingmoney) values(2,2,2,”2018-9-1 15:00:00”,555.55);
+insert into saas_customerprogram(orderid,qiyeid,programid,buyingtime,buyingmoney) values(2,2,2,”2018-8-1 16:00:00”,111.11);
