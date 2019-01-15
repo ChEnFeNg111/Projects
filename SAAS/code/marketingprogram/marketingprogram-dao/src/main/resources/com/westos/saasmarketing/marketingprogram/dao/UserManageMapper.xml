@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.westos.saasmarketing.marketingprogram.dao.UserManageMapper">
+
+
+
+    <!-- 获取自动增长列的值
+        parameterType="com.chen.entity.Student" 参数类型
+        useGeneratedKeys="true"   是否使用生成的主键
+        keyColumn="id"     指明哪一列是主键
+        keyProperty="id"   将查出来的自动增长列存入 MarketingProgram 的 programid 中
+    -->
+    <insert id="addProgram" parameterType="com.westos.saasmarketing.marketingprogram.domain.MarketingProgram">
+        <selectKey resultType="int" keyProperty="programid" order="BEFORE">
+          select max(programid)+1 as programid from saas_marketing_program
+        </selectKey>
+          insert into saas_marketing_program values(#{programId},#{name},#{author},#{programImage},#{price},#{programFile},#{describtion},#{publishTime},'1','0','yes','oncheck')
+    </insert>
+
+    <insert id="addCustomerProgram" parameterType="com.westos.saasmarketing.marketingprogram.domain.CustomerProgram">
+        <selectKey resultType="int" keyProperty="programid" order="BEFORE">
+            select max(orderid)+1 as orderid from saas_customerprogram
+        </selectKey>
+        insert into saas_customerprogram values(#{orderId},#{qiYeId},#{programId},#{buyingTime},#{buyingMoney},#{programFile})
+    </insert>
+
+
+</mapper>
